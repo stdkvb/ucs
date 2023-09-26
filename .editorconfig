@@ -1,0 +1,37 @@
+root = true
+
+[*.{js, ts, jsx, tsx}]
+charset = utf-8
+end_of_line = crlf
+indent_size = 2
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
+
+[*.json]
+charset = utf-8
+end_of_line = crlf
+indent_size = 2
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
+
+[*.html]
+charset = utf-8
+end_of_line = crlf
+indent_size = 2
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
+
+[*.scss]
+charset = utf-8
+end_of_line = crlf
+indent_size = 2
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
