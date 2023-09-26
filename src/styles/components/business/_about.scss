@@ -1,0 +1,45 @@
+.about {
+	.section__title {
+		white-space: nowrap;
+		margin-top: 5rem;
+
+		@include tablet {
+			white-space: normal;
+		}
+		span {
+			display: block;
+			text-transform: none;
+			@include InterMedium;
+			font-size: 1.8rem;
+			opacity: 0.5;
+			letter-spacing: .48rem;
+
+			@include tablet_small {
+				font-size: 1.4rem;
+				letter-spacing: .1rem;
+			}
+
+			@include mobile {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__numbers {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(232px, max-content));
+		gap: 50px 80px;
+		margin-top: 7rem;
+
+		@include desktop_large {
+			gap: 70px;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(2, minmax(min-content, 180px));
+			grid-template-rows: repeat(auto-fit, minmax());
+			gap: 10px;
+			margin-top: 3rem;
+		}
+	}
+}

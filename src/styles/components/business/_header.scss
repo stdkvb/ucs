@@ -1,0 +1,164 @@
+.header {
+	grid-area: header;
+	background-color: $dark;
+	overflow: hidden;
+
+	@include desktop_extra_small {
+		position: fixed;
+		top: 0;
+		z-index: 100;
+		width: 100%;
+	}
+
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+	
+	&__row {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2.5rem 0;
+
+		@include tablet {
+			padding: 2rem 0;
+		}
+
+		&:nth-child(2) {
+			border-top: solid 1px $dirty;
+			
+			@include tablet {
+				padding: 0;
+				border: none;
+			}
+		}
+
+		@include tablet {
+			padding: 2rem 0;
+		}
+	}
+
+	&__search-form {
+		@include tablet_small {
+			display: none;
+		}
+	}
+
+	&__menu {
+		@include tablet {
+			position: absolute;
+			left: 0;
+			top: 60px;
+			z-index: 1000;
+			width: 100vw;
+			height: calc(100vh - 60px);
+			max-height: 100vh;
+			background-color: $dark;
+			padding: 3rem 2rem 12rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2rem;
+			transition: all $transitionDuration;
+			transform: translateX(100vw);
+
+			&._active {
+				transform: translateX(0);
+				overflow-y: auto;
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		gap: 7rem;
+		flex-wrap: wrap;
+		width: 100%;
+
+		@include tablet {
+			flex-direction: column;
+			gap: 2rem;
+			max-width: none;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+
+		@include tablet {
+			flex-direction: row;
+			gap: 1.5rem;
+		}
+	}
+
+	&__link {
+		@include InterMedium;
+		font-size: 1.6rem;
+		line-height: 1.9;
+		color: $white;
+		transition: all $transitionDuration;
+		position: relative;
+
+		&_phone {
+
+			&-desktop {
+				@include tablet {
+					display: none;
+				}
+				&::after {
+					content: none;
+				}
+			}
+
+			&-adaptive {
+				display: none;
+				line-height: 0;
+
+				@include tablet {
+					display: block;
+				}
+
+				svg {
+					stroke: $orange;
+					width: 18px;
+					height: 18px;
+				}
+
+				&:hover {
+					svg {
+						stroke: $orangeHover;	
+					}
+				}
+
+				&::after {
+					content: none;
+				}
+			}
+		}
+
+		&_search {
+			height: 24px;
+			@include min_tablet_small {
+				display: none;
+			}
+		}
+	}
+
+	&__btn {
+		@include tablet {
+			display: none;
+		}
+	}
+}

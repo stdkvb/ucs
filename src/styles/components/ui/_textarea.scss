@@ -1,0 +1,64 @@
+textarea {
+	width: 100%;
+	min-height: 158px;
+	@include InterRegular;
+	transition: all $transitionDuration;
+	padding: 15px 20px;
+	border: 1px solid $borderForm;
+	outline: none;
+	color: $black;
+	background-color: transparent;
+	font-size: 1.6rem;
+	resize: none;
+
+	&:focus {
+		border: 1px solid $orange;
+	}
+
+	&:disabled {}
+
+	&::placeholder {
+		@include InterRegular;
+		color: $placeholderColor;
+		font-size: 1.6rem;
+
+		@include tablet {
+			font-size: 1.4rem;
+		}
+	}
+
+	&~.pristine-error {
+		display: none;
+	}
+
+	&[aria-invalid=true] {
+		&:not(:focus) {
+			border: 1px solid $error40;
+		}	
+	}
+
+	.has-success & {
+		&:not(:focus) {
+			border: 1px solid $success50;
+		}
+	}
+}
+
+.textarea__container {
+
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-bottom: 32px;
+
+	.textarea__label {
+		color: $dark;
+		font-size: 2rem;
+
+		@include tablet {
+			font-size: 1.4rem;
+		}
+	}
+}

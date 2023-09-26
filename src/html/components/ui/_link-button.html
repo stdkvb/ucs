@@ -1,0 +1,13 @@
+<span
+	class="@@if (context.class) {@@class}"
+	@@if (context.id) {id="@@id"}
+>
+	@@if (context.children) {
+		<span class="children">@@children</span>
+	}
+	<a
+		@@if (context.href) {href="@@href"}
+		@@if (context.target) {target="@@target"}
+		class="cover @@if (context.popup) {popup-link}"
+	></a>
+</span>

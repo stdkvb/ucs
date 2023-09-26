@@ -1,0 +1,32 @@
+.columns {
+	display: grid;
+	grid-template-columns: 600px auto;
+	gap: 4rem;
+
+	@include desktop {
+		display: block;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			@include desktop {
+				margin-bottom: 6rem;
+			}
+			@include mobile {
+				margin-bottom: 3rem;
+			}				
+		}
+	}
+
+	&__description {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+
+				@include tablet_small {
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+	}
+}

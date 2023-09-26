@@ -1,0 +1,82 @@
+.cookie-container {
+	position: fixed;
+	bottom: 0;
+	width: 700px;
+	background-color: $orange;
+	padding: 30px 111px 30px 60px;
+	z-index: 1000;
+	display: none;
+	flex-direction: column;
+	gap: 30px;
+
+	@include desktop_small {
+		width: 100vw;
+		padding: 20px;
+	}
+
+	&._showing {
+		display: flex;
+	}
+	.cookie__close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		height: 24px;
+		width: 24px;
+		z-index: 1000;
+		border: none;
+		padding: 0;
+		background: none;
+
+		&:before {
+			content: url("@icons/close-cookie.svg");
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.description {
+		@include InterRegular;
+		font-size: 1.8rem;
+		color: $white;
+
+		@include tablet_small {
+			margin-right: 4rem;
+		}
+
+		a,
+		a:visited,
+		a:focus {
+			font-weight: 400;
+			color: $white;
+			display: inline-block;
+
+			&::after {
+				background-color: $white;
+			}
+
+			&:hover {
+				color: $white;;
+			}
+		}
+	}
+
+	&__btn {
+		background-color: $white;
+		color: $orange;
+		width: 200px;
+		padding: 1rem 2rem;
+
+		&:hover {
+			color: $white;
+		}
+
+		@include tablet_small {
+			width: 100%;
+		}
+	}
+}

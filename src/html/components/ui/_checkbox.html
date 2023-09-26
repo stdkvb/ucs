@@ -1,0 +1,15 @@
+<div class="form-group">
+	<label class="checkbox@@if (context.class) { @@class}">
+		<input
+			class="form-control"
+			@@if (context.required) {required}
+			@@if (context.id) {id="@@id"}
+			@@if (context.name) {name="@@name"}
+			data-type="checkbox"
+			type="checkbox"
+			@@if (context.checked) {checked}
+		>
+		@@if (context.label && context.label !== "undefined") {<span class="label">@@label</span>}
+		<span class="custom-checkbox"></span>
+	</label>
+</div>

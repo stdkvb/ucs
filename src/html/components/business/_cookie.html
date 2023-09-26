@@ -1,0 +1,7 @@
+<div class="cookie-container">
+	@@include('components/ui/_button.html', {class: 'cookie__close cookie-accept'})
+	<div class="description">
+		Наш сайт использует куки. Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соответствии с <a href="#" target="_blank">политикой конфиденциальности.</a>
+	</div>
+	@@include('components/ui/_link-button.html', {children: 'Согласен', class: 'btn cookie-container__btn cookie-accept', href: '', popup: ''})
+</div>

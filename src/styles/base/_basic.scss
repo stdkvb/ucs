@@ -1,16 +1,138 @@
-/* Scrollbar Works on Chrome, Edge, and Safari */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: gray transparent;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 125%;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		background-color: $gray;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $orange;
+	}
 }
-*::-webkit-scrollbar {
-  width: 12px;
+
+html,
+body {
+	@include InterRegular;
+	height: 100%;
 }
-*::-webkit-scrollbar-track {
-  background: transparent;
+
+html {
+	font-size:62.5%;
 }
-*::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 20px;
-  border: none;
+
+body {
+	position: relative;
+	background-color: $white;
+	color: $dark;
+	overflow-y: overlay;
+	overflow-x: hidden;
+
+	&._lock {
+		overflow-y: hidden;
+	}
+
+	@supports (-moz-appearance:none) {
+		overflow-y: auto;
+	}
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	display: grid;
+    grid-template: minmax(112px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+
+		@include desktop_extra_small {
+			grid-template: minmax(60px, auto) 1fr minmax(70px, auto) / 1fr;
+
+			grid-template-areas:
+				"header"
+				"main"
+				"footer";
+			}
+}
+
+
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin: 0 auto;
+}
+
+main {
+	grid-area: main;
+}
+
+h1 {
+	@include InterBold;
+	font-size: 10rem;
+
+	@include mobile {
+		font-size: 2.2rem;
+	}
+}
+
+h2 {
+	@include InterBold;
+	font-size: 4rem;
+
+	@include mobile {
+		font-size: 2rem;
+	}
+}
+
+h3 {
+	@include InterSemiBold;
+	font-size: 2.9rem;
+
+	@include mobile {
+		font-size: 2rem;
+	}
+}
+
+h4,
+p {
+	@include InterRegular;
+	font-size: 2.4rem;
+
+	@include mobile {
+		font-size: 1.4rem;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	:disabled {
+		cursor: default;
+	}
+
+}
+
+img {
+	width: 100%;
 }

@@ -1,0 +1,28 @@
+.logo {
+	user-select: none;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	min-width: 463px;
+	flex-grow: 1;
+
+	@include desktop_extra_small {
+		min-width: auto;
+		max-width: 203px;
+		gap: 1rem;
+	}
+
+	& a,
+	a:visited,
+	a:focus {
+		
+		&::after {
+			content: none;
+		}
+	}
+
+	& > a > img {
+		max-width: 227px;
+		max-height: 18px;
+	}
+}

@@ -1,0 +1,49 @@
+a,
+a:visited,
+a:focus {
+	text-decoration: none;
+	transition: all $transitionDuration;
+	user-select: none;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		background-color: $orange;
+		transition: width $transitionDuration;
+
+		@include desktop_extra_small {
+			content: none;
+		}
+	}
+}
+
+a {
+	font-weight: 700;
+	color: $dark;
+
+	&.link_underline {
+		@include InterMedium;
+		font-size: 1.6rem;
+		color: $orange;
+		border-bottom: 1px dashed $orange;
+
+		&::after {
+			display: none;
+		}
+
+		&:hover {
+			color: $white;
+			border-bottom: 1px dashed $white;
+		}
+	}
+}
+
+a:hover {
+	color: $orange;
+
+	&::after {
+		width: 100%;
+	}
+}

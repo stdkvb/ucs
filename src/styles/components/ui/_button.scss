@@ -1,0 +1,111 @@
+.btn {
+	padding: 1.85rem 2.95rem;
+	background-color: $orange;
+	color: $white;
+	position: relative;
+	transition: all $transitionDuration;
+	border-radius: 50px;
+	@include InterMedium;
+	font-size: 1.6rem;
+
+	@include mobile {
+		width: 100%;
+		max-width: none;
+	}
+
+	&:hover {
+		background-color: $orangeHover;
+		cursor: pointer;
+	}
+
+	.children {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+
+		@include mobile {
+			white-space: normal;
+			text-align: center;
+		}
+	}
+
+	.cover {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 30;
+
+		&::after {
+			content: none;
+		}
+	}
+
+	&_mobile-menu {
+		display: none;
+
+		@include tablet {
+			display: block;
+		}
+	}
+}
+
+.burger-btn {
+	background-color: transparent;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: end;
+	gap: 5px;
+	display: none;
+
+	@include tablet {
+		display: flex;
+		transition: all $transitionDuration;
+		
+		.children {
+			transition: all $transitionDuration;
+		}
+	}
+
+	.children,
+	&::before,
+	&::after {
+		display: block;
+		height: 2px;
+		background-color: $white;
+		border-radius: 10px;
+		transition: all $transitionDuration;
+	}
+
+	.children {
+		width: 14px;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		width: 20px;		
+	}
+
+	&.active {
+		.children {
+			display: none;
+		}
+
+		&::before {
+			transform: translateY(4px) rotate(45deg);
+		}
+
+		&::after {
+			transform: translateY(-3px) rotate(-45deg);
+		}
+	}
+}

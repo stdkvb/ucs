@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang='en'>
+@@include('meta/_head.html', {title: 'О компании'})
+
+<body>
+	<div class="wrapper">
+		@@include('components/business/_header.html')
+		<main>
+			<section class="about" id="about">
+				<div class="container section__wrapper columns">
+					<div class="columns__item element-animation">
+						<h4 class="section__subtitle">О компании</h4>
+						
+						<img src="@images/office.png" alt="Юнион Кэмикал Солюшенс">
+					</div>
+					<div class="columns__item element-animation transition-delay-1">
+						<h2 class="section__title">
+							ООО «Юнион Кэмикал<br>Солюшенс»
+						</h2>
+						<div class="columns__description">
+							<p>
+								Российская компания, основанная в 2015 году, как часть глобальной группы компаний Univar Solutions. В 2022 году компания реорганизуется и становится самостоятельным предприятием, а также открывает компанию в Турции – Solutions Kimya LTD.
+							</p>
+							<p>
+								Сейчас компания UCS является надежным поставщиком сырьевых химических продуктов производителей из Ирана, Индии, Турции, Китая. Ведущие российские предприятия пищевой, нефтеперерабатывающей, нефтехимической, химической и металлургической промышленности уже являются клиентами компании.
+							</p>
+							<p>
+								Многолетний опыт помог нам выстроить крепкие партнерские отношения с десятками компаний по всему миру. Для максимального удовлетворения потребностей предприятий-партнеров сформирован большой ассортимент продуктов, с осуществлением технической поддержки на всех уровнях до и во время выполнения контракта.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contacts" id="contacts">
+				<div class="container section__wrapper">
+					<h2 class="section__title element-animation">Получить консультацию и протестировать продукт</h2>
+					<div class="columns">
+						<div class="columns__item element-animation">
+							@@include('components/business/_call-request.html')
+						</div>
+						<div class="columns__item element-animation">
+							<div class="contacts__map" id="yandex-map"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('components/business/_footer.html')
+		@@include('components/business/_cookie.html')
+	</div>
+
+	@@include('components/business/_popup-feedback.html')
+	@@include('components/business/_popup-successfully.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

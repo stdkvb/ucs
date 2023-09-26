@@ -1,0 +1,19 @@
+<div class="form-group textarea__container">
+	@@if (context.label) {
+	@@if (context.id) {
+	<label class="textarea__label" for="@@id">@@label@@if (context.required) {*}</label>
+	}
+	@@if (!context.id) {
+	<span class="textarea__label">@@label@@if (context.required) {*}</span>
+	}
+	}
+	<textarea
+		class="form-control"
+		@@if (context.placeholder) {placeholder="@@placeholder"}
+		@@if (!context.placeholder) {placeholder="Введите текст"}
+		@@if (context.required) {required}
+		@@if (context.id) {id="@@id"}
+		@@if (context.name) {name="@@name"}
+		data-type="textarea"
+	></textarea>
+</div>
