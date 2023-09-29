@@ -22,5 +22,15 @@
 		&::after {
 			content: none;
 		}
+
+		&_inverse {
+			svg {
+				&:hover {
+					path {
+						fill: $black;
+					}
+				}
+			}
+		}
 	}
 }

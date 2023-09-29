@@ -8,13 +8,19 @@
 	}
 
 	&__item {
+		&:last-child {
+			padding-top: 6rem;
+			@include mobile {
+				padding-top: 1rem;
+			}
+		}
 		&:not(:last-child) {
 			@include desktop {
 				margin-bottom: 6rem;
 			}
 			@include mobile {
 				margin-bottom: 3rem;
-			}				
+			}
 		}
 	}
 

@@ -1,0 +1,21 @@
+.connect {
+	background-color: $dark;
+
+	.section__title {
+		color: $white;
+		max-width: 650px;
+
+		@include desktop {
+			max-width: none;
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 100%;
+
+		@include desktop {
+			height: 369px;
+		}
+	}
+}

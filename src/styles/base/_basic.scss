@@ -112,6 +112,16 @@ p {
 	}
 }
 
+h5 {
+	margin-bottom: 2rem;
+	@include InterBold;
+	font-size: 2.4rem;
+
+	@include mobile {
+		font-size: 2rem;
+	}
+}
+
 a {
 	text-decoration: none;
 }
