@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang='en'>
+@@include('meta/_head.html', {title: 'Детальная продукта'})
+
+<body>
+	<div class="wrapper">
+		@@include('components/business/_header.html')
+		<main>
+			<section class="product">
+				<div class="container product__back-button"><a class="link_orange">&#8592; Вернуться</a></div>
+				<div class="container section__wrapper columns">
+					<div class="columns__item element-animation">
+						<div class="columns__description">
+							<img src="@images/product-1.webp" alt="Наши решения">
+						</div>
+					</div>
+					<div class="columns__item element-animation transition-delay-1">
+						<h2 class="section__title">Метабисульфит натрия (Китай)</h2>
+						<span class="product__weight">25кг</span>
+						<div class="product__buttons">
+							@@include('components/ui/_link-button.html', {children: 'Запросить TDS', class: 'btn btn_transparent', href: '#'})
+							@@include('components/ui/_link-button.html', {children: 'Оставить заявку', class: 'btn', href: '#popup-feedback', popup: 'true'})
+						</div>
+						<div class="product__manager">
+							<div class="product__manager-info">
+								<span>Никитин Роман Валерьевич</span>
+								<span>Менеджер по продажам</span>
+							</div>
+							<div class="product__manager-buttons">
+								@@include('components/ui/_link-button.html', {children: 'Связаться по почте', class: 'btn btn_transparent', href: 'mailto:mail@mail.com'})
+								@@include('components/ui/_link-button.html', {children: 'Связаться', class: 'btn', href: 'tel:+1800909090'})
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="other-products">
+				<div class="container section__wrapper">
+					<h2 class="section__title">Другая продукция<br>из этой отрасли</h2>
+					<div class="other-products__list">
+						<div class="other-products__item">
+							<a href="#" class="other-products__title">SEBAmyl X 25P. Альфа-Амилаза</a>
+							<span class="other-products__weight">25 кг</span>
+							<div class="other-products__buttons">
+								@@include('components/ui/_link-button.html', {children: 'Запросить TDS', class: 'btn btn_transparent', href: '#'})
+								@@include('components/ui/_link-button.html', {children: 'Оставить заявку', class: 'btn', href: '#popup-feedback', popup: 'true'})
+							</div>
+						</div>
+						<div class="other-products__item">
+							<a href="#" class="other-products__title">SEBAmyl X 25P. Альфа-Амилаза</a>
+							<span class="other-products__weight">25 кг</span>
+							<div class="other-products__buttons">
+								@@include('components/ui/_link-button.html', {children: 'Запросить TDS', class: 'btn btn_transparent', href: '#'})
+								@@include('components/ui/_link-button.html', {children: 'Оставить заявку', class: 'btn', href: '#popup-feedback', popup: 'true'})
+							</div>
+						</div>
+						<div class="other-products__item">
+							<a href="#" class="other-products__title">SEBake Fresh 10P. Мальтогенная амилаза</a>
+							<span class="other-products__weight">25 кг</span>
+							<div class="other-products__buttons">
+								@@include('components/ui/_link-button.html', {children: 'Запросить TDS', class: 'btn btn_transparent', href: '#'})
+								@@include('components/ui/_link-button.html', {children: 'Оставить заявку', class: 'btn', href: '#popup-feedback', popup: 'true'})
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="connect">
+				<div class="container section__wrapper">
+					<h2 class="section__title element-animation">Получить консультацию и протестировать продукт</h2>
+					<div class="columns">
+						<div class="columns__item element-animation">
+							@@include('components/business/_call-request.html')
+						</div>
+						<div class="columns__item element-animation">
+							<div class="connect__map" id="yandex-map"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('components/business/_footer.html')
+		@@include('components/business/_cookie.html')
+	</div>
+
+	@@include('components/business/_popup-feedback.html')
+	@@include('components/business/_popup-successfully.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

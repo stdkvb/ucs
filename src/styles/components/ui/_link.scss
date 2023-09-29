@@ -38,10 +38,26 @@ a {
 			border-bottom: 1px dashed $white;
 		}
 	}
+
+	&.link_orange {
+		@include InterMedium;
+		font-size: 1.6rem;
+		color: $orange;
+
+		&::after {
+			display: none;
+		}
+
+		&:hover {
+			color: $black;
+		}
+	}
+
 }
 
 a:hover {
 	color: $orange;
+	cursor: pointer;
 
 	&::after {
 		width: 100%;

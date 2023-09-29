@@ -1,5 +1,5 @@
 .btn {
-	padding: 1.85rem 2.95rem;
+	padding: 1rem 2.95rem;
 	background-color: $orange;
 	color: $white;
 	position: relative;
@@ -16,6 +16,20 @@
 	&:hover {
 		background-color: $orangeHover;
 		cursor: pointer;
+	}
+
+
+	&_transparent {
+		background-color: transparent;
+		color: $orange;
+		border: solid 1px $orange;
+
+		&:hover {
+			background-color: $orangeHover;
+			border-color: $orangeHover;
+			cursor: pointer;
+			color: $white;
+		}
 	}
 
 	.children {

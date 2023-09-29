@@ -83,6 +83,10 @@
 		flex-wrap: wrap;
 		width: 100%;
 
+		@include desktop_extra_small {
+			gap: 4rem;
+		}
+
 		@include tablet {
 			flex-direction: column;
 			gap: 2rem;
