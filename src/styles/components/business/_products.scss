@@ -1,13 +1,8 @@
 .products {
-	background-color: $gray;
-
-	@include tablet {
-		background-color: $white;
-	}
 
 	&__label {
 		width: 100%;
-		max-width: 941px;
+		max-width: 531px;
 	}
 
 	&__items {

@@ -22,9 +22,27 @@
 		}
 	}
 
+	&_black {
+		input {
+			color: $black;
+		}
+
+		.search-bar__submit {
+			background-image: url(@icons/search_black.svg);
+		}
+
+		.search-bar__reset::after {
+			content: url(@icons/close-cookie_black.svg);
+		}
+	}
+
+	&_wide {
+		max-width: unset;
+	}
+
 	&__submit {
-		width: 2.1em;
-		height: 2.1em;
+		width: 2rem;
+		height: 2rem;
 		background-image: url(@icons/search.svg);
 		background-repeat: no-repeat;
 		background-position: center;
