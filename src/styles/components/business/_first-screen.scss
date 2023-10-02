@@ -1,0 +1,28 @@
+.first-screen {
+    padding-top: 12rem;
+    padding-bottom: 14rem;
+
+    @include tablet {
+        padding-top: 10rem;
+        padding-bottom: 6rem;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+
+        @include mobile {
+            margin-bottom: 3rem;
+        }
+
+        span {
+            color: $orange;
+            text-transform: uppercase;
+
+            &:last-child {
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+}

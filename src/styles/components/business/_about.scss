@@ -1,4 +1,13 @@
 .about {
+	.btn {
+		margin-top: 5rem;
+		min-width: 32rem;
+
+		@include mobile {
+			margin-top: 3rem;
+		}
+	}
+
 	.section__title {
 		white-space: nowrap;
 		margin-top: 5rem;

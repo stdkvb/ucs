@@ -17,6 +17,9 @@
 
 		&_no-padding {
 			padding-top: 0;
+			@include tablet {
+				padding-top: 0;
+			}
 		}
 	}
 	
@@ -41,7 +44,7 @@
 
 	&__title {
 		text-transform: uppercase;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 
 		@include mobile {
 			margin-bottom: 2rem;

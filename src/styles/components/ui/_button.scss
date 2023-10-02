@@ -32,6 +32,20 @@
 		}
 	}
 
+	&_link {
+		display: block;
+		width: fit-content;
+		text-align: center;
+
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			color: $white;
+		}
+ 	}
+
 	.children {
 		position: relative;
 		display: flex;

@@ -1,0 +1,14 @@
+.presentation {
+    background-color:  $gray;
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        grid-template-rows: max-content 1fr auto;
+
+        .btn {
+            margin-top: 3rem;
+            align-self: end;
+        }
+    }
+}

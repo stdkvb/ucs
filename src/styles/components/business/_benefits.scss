@@ -1,0 +1,41 @@
+.benefits {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8rem;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background-color: $gray;
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        
+        @include mobile {
+            padding: 2rem;
+        }
+    }
+
+    &__title {
+        @include InterBold;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: 3rem 0 1rem 0;
+
+        @include mobile {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+
+        @include mobile {
+            font-size: 1.4rem;
+        }
+    }
+}

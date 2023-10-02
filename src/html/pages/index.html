@@ -3,7 +3,187 @@
 @@include('meta/_head.html', {title: 'NewPage'})
 
 <body>
+	@@include('components/business/_header.html')
+	<main>
+		<section class="first-screen">
+			<div class="container">
+				<h1 class="first-screen__title element-animation">
+					<span>Российская компания</span>
+					<span>Юнион кэмикал солюшенс</span>
+				</h1>
+			</div>
+			<img src="@images/office.png">
+		</section>
+		<section class="benefits">
+			<div class="container section__wrapper section__wrapper_no-padding">
+				<div class="benefits__items">
+					<div class="benefits__item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+							<path d="M14.5833 22.9166L22.9167 4.16663C24.5743 4.16663 26.164 4.82511 27.3361 5.99721C28.5082 7.16931 29.1667 8.75902 29.1667 10.4166V18.75H40.9583C41.5623 18.7431 42.1605 18.8677 42.7116 19.115C43.2627 19.3623 43.7534 19.7265 44.1497 20.1823C44.546 20.6381 44.8386 21.1746 45.007 21.7547C45.1754 22.3347 45.2156 22.9445 45.125 23.5416L42.25 42.2916C42.0993 43.2852 41.5947 44.1908 40.829 44.8416C40.0633 45.4925 39.0882 45.8447 38.0833 45.8333H14.5833M14.5833 22.9166V45.8333M14.5833 22.9166H8.33333C7.22827 22.9166 6.16846 23.3556 5.38706 24.137C4.60565 24.9184 4.16667 25.9782 4.16667 27.0833V41.6666C4.16667 42.7717 4.60565 43.8315 5.38706 44.6129C6.16846 45.3943 7.22827 45.8333 8.33333 45.8333H14.5833" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span class="benefits__title">Деловая репутация компании</span>
+						<span class="benefits__subtitle">Надежность и ответственность</span>
+					</div>
+					<div class="benefits__item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+							<path d="M35.4167 43.75V39.5833C35.4167 37.3732 34.5387 35.2536 32.9759 33.6908C31.4131 32.128 29.2935 31.25 27.0833 31.25H10.4167C8.20654 31.25 6.08692 32.128 4.52412 33.6908C2.96132 35.2536 2.08334 37.3732 2.08334 39.5833V43.75" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M18.75 22.9167C23.3524 22.9167 27.0833 19.1857 27.0833 14.5833C27.0833 9.98096 23.3524 6.25 18.75 6.25C14.1476 6.25 10.4167 9.98096 10.4167 14.5833C10.4167 19.1857 14.1476 22.9167 18.75 22.9167Z" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M47.9167 43.75V39.5834C47.9153 37.737 47.3007 35.9433 46.1695 34.484C45.0383 33.0247 43.4544 31.9825 41.6667 31.5209" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M33.3333 6.52087C35.1259 6.97983 36.7147 8.02233 37.8493 9.48402C38.9838 10.9457 39.5997 12.7434 39.5997 14.5938C39.5997 16.4441 38.9838 18.2419 37.8493 19.7036C36.7147 21.1652 35.1259 22.2077 33.3333 22.6667" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span class="benefits__title">Клиентоориентированность</span>
+						<span class="benefits__subtitle">Развиваем качественный бизнес</span>
+					</div>
+					<div class="benefits__item">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+							<path d="M34.375 19.5834L15.625 8.77087" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M43.75 33.3333V16.6666C43.7492 15.9359 43.5564 15.2183 43.1907 14.5857C42.825 13.9531 42.2995 13.4278 41.6667 13.0625L27.0833 4.72913C26.4499 4.36342 25.7314 4.1709 25 4.1709C24.2686 4.1709 23.5501 4.36342 22.9167 4.72913L8.33333 13.0625C7.70055 13.4278 7.17496 13.9531 6.80929 14.5857C6.44363 15.2183 6.25075 15.9359 6.25 16.6666V33.3333C6.25075 34.064 6.44363 34.7816 6.80929 35.4142C7.17496 36.0468 7.70055 36.5721 8.33333 36.9375L22.9167 45.2708C23.5501 45.6365 24.2686 45.829 25 45.829C25.7314 45.829 26.4499 45.6365 27.0833 45.2708L41.6667 36.9375C42.2995 36.5721 42.825 36.0468 43.1907 35.4142C43.5564 34.7816 43.7492 34.064 43.75 33.3333Z" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M6.8125 14.5L25 25.0208L43.1875 14.5" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M25 46V25" stroke="#F46D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<span class="benefits__title">Сеть складов</span>
+						<span class="benefits__subtitle">Сеть собственных складов по стране</span>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<section class="products">
+			<div class="container section__wrapper section__wrapper_no-padding">
+				<div class="products__label element-animation element-show">
+					<h4 class="section__subtitle">Отрасли применения</h4>
+				</div>
+				<div class="products__items">
+					<div class="products__row">
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Нефтехимическая промышленность</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-1.png" alt="industry-1">
+							</div>
+						</a>
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Горнодобывающая промышленность</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-2.png" alt="industry-2">
+							</div>
+						</a>
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Производство бытовой химии</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-3.png" alt="industry-31">
+							</div>
+						</a>
+					</div>
+					<div class="products__row">
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Производство шин</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-4.png" alt="industry-4">
+							</div>
+						</a>
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Пищевая промышленность</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-5.png" alt="industry-5">
+							</div>
+						</a>
+						<a href="#" class="products__item element-animation">
+							<div class="products__desc">
+								<h3 class="products__title">Катализаторы и адсорбенты</h3>
+								<div class="products__arrow">
+									<img src="@icons/arrow-down.svg" alt="#">
+								</div>
+							</div>
+							<div class="products__img">
+								<img src="@images/industry-6.png" alt="industry-6">
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="presentation">
+			<div class="container section__wrapper columns">
+				<div class="columns__item element-animation">
+					<img src="@images/turbine.webp" alt="turbine">
+				</div>
+				<div class="columns__item element-animation transition-delay-1 presentation__content">
+					<h3 class="section__title">Промышленное технологическое оборудование</h3>
+					<p>Мы занимаемся поставками химического сырья и сырьевых ингредиентов и осуществляем разностороннюю, профессиональную и постоянную поддержку всех своих клиентов.</p>
+					<a class="btn btn_link" href='#' download>Скачать презентацию</a>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container section__wrapper columns">
+				<div class="columns__item element-animation">
+					<h4 class="section__subtitle">О компании</h4>
+					<h3 class="section__title">
+						Юнион Кэмикал Солюшенс
+					</h3>
+					<p>Мы занимаемся поставками химического сырья и сырьевых ингредиентов и осуществляем разностороннюю, профессиональную и постоянную поддержку всех своих клиентов.</p>
+					<a class="btn btn_link" href='#'>Подробнее</a>
+				</div>
+				<div class="columns__item element-animation transition-delay-1">
+					<div class="about__numbers numbers element-animation">
+						<div class="numbers__item">
+							<span class="value">8</span>
+							<p>лет успешной работы</p>
+						</div>
+						<div class="numbers__item">
+							<span class="value value_plus">250</span>
+							<p>довольных клиентов</p>
+						</div>
+						<div class="numbers__item">
+							<span class="value value_plus">600</span>
+							<p>выполненных работ</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="connect">
+			<div class="container section__wrapper">
+				<h2 class="section__title element-animation">Оставить заявку</h2>
+				<div class="columns">
+					<div class="columns__item element-animation">
+						@@include('components/business/_call-request.html')
+					</div>
+					<div class="columns__item element-animation">
+						<div class="connect__map" id="yandex-map"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_cookie.html')
 	@@include('meta/_includeScripts.html')
 </body>
 

@@ -1,0 +1,38 @@
+.numbers {
+	&__item {
+		.value {
+			@include InterSemiBold;
+			font-size: calc(10px + 90 * (100vw / 1920));
+			text-transform: uppercase;
+			color: $orange;
+			display: flex;
+			align-items: center;
+
+			@include min_desktop_extra {
+				font-size: 10rem;
+			}
+
+			@include desktop_huge {
+				font-size: calc(10px + 60 * (100vw / 1920));
+			}
+
+			@include mobile {
+				font-size: 3rem;
+			}
+
+			&_plus {
+				&::after {
+					content: '+';
+				}
+			}
+		}
+
+		p {
+			@include InterSemiBold;
+
+			@include mobile {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

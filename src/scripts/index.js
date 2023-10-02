@@ -1,6 +1,6 @@
 import takeControlYandexMap from './ElementsControllers/YandexMapController'
 import preloaderOnload from './ElementsControllers/PreloaderController'
-// import CounterItemController from './ElementsControllers/CounterItemController'
+import CounterItemController from './ElementsControllers/CounterItemController'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlForms from './ElementsControllers/FormController'
 import CookieController from './ElementsControllers/CookieController'
@@ -74,58 +74,18 @@ function onEntry(entry) {
 // 	})
 // }, 11000)
 
-// Swipers
-// const swiperFirstScreen = new Swiper('.firstscreen__swiper', {
-// 	pagination: {
-// 		el: '.swiper-pagination',
-// 		type: 'bullets',
-// 		clickable: true
-// 	},
-// 	loop: true,
-// 	slidesPerView: 1,
-// 	watchOverflow: true,
-// 	slidesPerGroup: 1,
-// 	grabCursor: true,
-// 	autoplay: {
-// 		delay: 5000
-// 	}
-// })
 
-// const swiperPortfolio = new Swiper('.portfolio__items .swiper', {
-// 	loop: false,
-// 	loopedSlides: 0,
-// 	watchOverflow: true,
-// 	slidesPerView: 4,
-// 	slidesPerGroup: 1,
-// 	grabCursor: true,
-// 	spaceBetween: 10,
-// 	scrollbar: {
-// 		el: '.portfolio__items .swiper-scrollbar',
-// 		draggable: true
-// 	}
-// })
 
 // Counter
-// new CounterItemController({
-// 	countersElementsWrapperSelector: '.numbers',
-// 	counterElementSelector: '.numbers__item',
-// 	counterNumElementSelector: '.value',
-// 	calcAnimationDelay: 2000,
-// 	clearHoverDelay: 100
-// })
+new CounterItemController({
+	countersElementsWrapperSelector: '.numbers',
+	counterElementSelector: '.numbers__item',
+	counterNumElementSelector: '.value',
+	calcAnimationDelay: 2000,
+	clearHoverDelay: 100
+})
 
-// Modal
-
-// Header's link
-// const headerMenu = document.querySelector('.header__menu')
-// const headerLinks = document.querySelectorAll('.header__link')
-// for (let index = 0; index < headerLinks.length; index++) {
-// 	headerLinks[index].addEventListener('click', function (e) {
-// 		bodyUnlock()
-// 		menu.classList.remove('_active')
-// 	})
-// }
-
+//modal
 const popupLinks = document.querySelectorAll('.popup-link')
 
 const body = document.querySelector('body')
