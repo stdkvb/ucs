@@ -1,0 +1,35 @@
+.partners {
+    background-color: $gray;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        margin-top: 4rem;
+        gap: 4rem;
+
+        @include tablet{
+            margin-top: 1.7rem;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 1.7rem;
+        }
+    }
+
+    &__item {
+        max-width: 240px;
+        filter: grayscale(100%);
+        transition: all $transitionDuration;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+
+        img {
+            object-fit: contain !important;
+        }    
+
+        @include tablet {
+            min-width: unset;
+        }
+    }
+}
