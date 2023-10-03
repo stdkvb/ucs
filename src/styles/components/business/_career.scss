@@ -1,0 +1,14 @@
+.career {
+    &__label {
+		width: 100%;
+		max-width: 600px;
+	}
+
+    .section__title {
+       margin-bottom: 6rem;
+
+       @include mobile {
+        margin-bottom: 3rem;
+       }
+    }
+}

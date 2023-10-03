@@ -6,6 +6,7 @@ import takeControlForms from './ElementsControllers/FormController'
 import CookieController from './ElementsControllers/CookieController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import addPopupCloseListener from './listeners/addPopupCloseListener'
+import addFileNameListeners from './listeners/addFileNameListener'
 
 addPhoneMaskListeners()
 addPopupCloseListener(popupClose)
@@ -13,6 +14,7 @@ takeControlMenu()
 takeControlForms()
 takeControlYandexMap()
 CookieController('.cookie-container', '.cookie-accept')
+addFileNameListeners()
 
 document.body.classList.add('_lock')
 window.onload = () => {

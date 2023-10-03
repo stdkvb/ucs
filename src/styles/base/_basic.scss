@@ -86,7 +86,7 @@ h1 {
 
 h2 {
 	@include InterBold;
-	font-size: 4rem;
+	font-size: 3.6rem;
 
 	@include mobile {
 		font-size: 2rem;
