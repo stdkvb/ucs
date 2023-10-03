@@ -1,4 +1,24 @@
 .numbers {
+	&_gray {
+		background-color: $gray;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile {
+			gap: 4rem;
+			flex-wrap: wrap;
+		}
+
+		.numbers__item {
+			@include mobile {
+				max-width: 140px;
+			}
+		}
+	}
+
 	&__item {
 		.value {
 			@include InterSemiBold;
@@ -17,7 +37,7 @@
 			}
 
 			@include mobile {
-				font-size: 3rem;
+				font-size: 5rem;
 			}
 
 			&_plus {
