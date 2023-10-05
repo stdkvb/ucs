@@ -14,11 +14,15 @@
 		height: 43px;
 		padding: 0 60px 0 20px;
 		border: none;
-		color: $white;
-		opacity: 0.5;
+		color: $white;		
 		background: transparent;
+
 		&:focus-visible {
 			outline: none;
+		}
+
+		&:placeholder {
+			opacity: 0.5;
 		}
 	}
 

@@ -48,6 +48,21 @@
 	&__search-form {
 		@include tablet_small {
 			display: none;
+			position: fixed;
+			top: 0;
+			width: calc(100% - 4rem);
+			z-index: 2;
+			background-color: $dark;
+			padding: 2rem 0;
+
+			.search-bar {
+				max-width: unset;
+				height: 3rem;
+			}
+
+			&.active {
+				display: block;
+			}
 		}
 	}
 
@@ -55,7 +70,7 @@
 		@include tablet {
 			position: absolute;
 			left: 0;
-			top: 60px;
+			top: 70px;
 			z-index: 1000;
 			width: 100vw;
 			height: calc(100vh - 60px);
@@ -91,6 +106,15 @@
 			flex-direction: column;
 			gap: 2rem;
 			max-width: none;
+		}
+
+		.header__link.active {
+			color: $orange;
+			cursor: unset;
+
+			&:after {
+				width: 100%;
+			}
 		}
 	}
 
@@ -156,6 +180,12 @@
 			height: 24px;
 			@include min_tablet_small {
 				display: none;
+			}
+
+			&:hover {
+				svg {
+					stroke: $orangeHover;	
+				}
 			}
 		}
 	}

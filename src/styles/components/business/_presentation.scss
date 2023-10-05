@@ -9,6 +9,11 @@
         .btn {
             margin-top: 3rem;
             align-self: end;
+            width: 400px;
+
+            @include mobile {
+                width: unset;
+            }
         }
     }
 }

@@ -105,9 +105,14 @@
 	&__title {
 		color: $white;
 		margin-bottom: 3rem;
+		font-size: 3.2rem;
 
 		@include tablet {
 			margin-bottom: 2rem;
+		}
+
+		@include mobile {
+			font-size: 2rem;
 		}
 	}
 

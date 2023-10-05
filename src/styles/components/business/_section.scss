@@ -56,6 +56,14 @@
 			}
 		}
 
+		&_br {
+			@include tablet {
+				br {
+					display: none;
+				}
+			}
+		}
+
 		@include mobile {
 			margin-bottom: 2rem;
 		}

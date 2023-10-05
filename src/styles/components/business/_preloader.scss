@@ -1,0 +1,37 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100000;
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all $transitionDuration;
+	opacity: 1;
+
+	&__wrapper {
+		width: 101px;
+		height: 123px;
+		animation: rotation .9s linear 0s infinite normal none;
+	}
+
+	&__item {
+		fill: $orange;
+		animation: preloaderStyle .9s linear 0s infinite alternate none;
+
+		&:first-child {
+			animation-direction: alternate-reverse;
+		}
+		&:last-child {
+			animation-direction: alternate;
+		}
+	}
+
+	.loaded & {
+		opacity: 0;
+		visibility: hidden;
+	  }
+}

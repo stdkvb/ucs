@@ -4,7 +4,8 @@
 
 <body>
 	<div class="wrapper">
-		@@include('components/business/_header.html')
+		@@include('components/business/_preloader.html')
+		@@include('components/business/_header.html', {activenav: true})
 		<main>
 			<section class="career">
 				<div class="container section__wrapper">
@@ -34,10 +35,10 @@
 					<div class="products__label element-animation">
 						<h4 class="section__subtitle">Мы на HH.RU</h4>
 					</div>					
-					<h2 class="section__title section__title_narrow">Присоединяйся к команде «Юнион кэмикал солюшенс»</h2>			
+					<h2 class="section__title section__title_narrow section__title_br">Присоединяйся <br>к команде «Юнион <br>кэмикал солюшенс»</h2>			
 					<div class="products__items">
 						<div class="products__row">
-							<a href="#" class="products__item element-animation">
+							<a href="#" target="_blank" class="products__item element-animation">
 								<div class="products__desc">
 									<h3 class="products__title">Менеджер по продажам нефтехимической продукции</h3>
 									<div class="products__arrow">
@@ -48,7 +49,7 @@
 									<img src="@images/engineer.png" alt="industry-1">
 								</div>
 							</a>
-							<a href="#" class="products__item element-animation">
+							<a href="#" target="_blank" class="products__item element-animation">
 								<div class="products__desc">
 									<h3 class="products__title">Менеджер-технолог по продажам катализаторов</h3>
 									<div class="products__arrow">
@@ -59,7 +60,7 @@
 									<img src="@images/engineer-2.png" alt="industry-2">
 								</div>
 							</a>
-							<a href="#" class="products__item element-animation">
+							<a href="#" target="_blank" class="products__item element-animation">
 								<div class="products__desc">
 									<h3 class="products__title">Менеджер по продажам</h3>
 									<div class="products__arrow">

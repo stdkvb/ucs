@@ -73,23 +73,25 @@ input {
 			border: none;
 			opacity: 0;
 			width: 100%;
+			cursor: pointer;
 		}
 
 		.file-button {
 			position: absolute;
 			pointer-events: none;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 10px;
 			top: 4rem;
 			left: 0;
 			font-size: 1.5rem;
-			color: $placeholderColor;
+			color: $black;
 			opacity: 0.7;
 			padding: 15px 17px;
 			border: 1px solid $borderForm;
 			width: 100%;
+			cursor: pointer;
+			max-width: 100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: block;
 
 			@include tablet {
 				top: 3rem;
@@ -97,6 +99,15 @@ input {
 
 			&:hover {
 				cursor: pointer;
+			}
+
+			svg {
+				position: absolute;
+				right: 17px;
+			}
+
+			&_placeholder {
+				color: $placeholderColor;
 			}
 		}
 	}

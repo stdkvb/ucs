@@ -4,7 +4,8 @@
 
 <body>
 	<div class="wrapper">
-		@@include('components/business/_header.html')
+		@@include('components/business/_preloader.html')
+		@@include('components/business/_header.html', {activenav: true})
 		<main>
 			<section class="products">
 				<div class="container section__wrapper">
@@ -174,12 +175,26 @@
 					</ul>
 				</div>
 			</section>
+			<section class="connect">
+				<div class="container section__wrapper">
+					<h2 class="section__title element-animation">Получить консультацию и протестировать продукт</h2>
+					<div class="columns">
+						<div class="columns__item element-animation">
+							@@include('components/business/_call-request.html')
+						</div>
+						<div class="columns__item element-animation">
+							<div class="connect__map" id="yandex-map"></div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('components/business/_footer.html')
 		@@include('components/business/_cookie.html')
 	</div>
 
-
+	@@include('components/business/_popup-feedback.html')
+	@@include('components/business/_popup-successfully.html')
 	@@include('meta/_includeScripts.html')
 </body>
 

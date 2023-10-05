@@ -63,21 +63,6 @@ function onEntry(entry) {
 	})
 }
 
-//повторять анимацию лого каждые 10сек
-// setInterval(() => {
-// 	document.querySelectorAll('.logo_animation__arrow').forEach((el) => {
-// 		el.classList.remove('logo_animation__arrow_active')
-// 	})
-// }, 10000)
-
-// setInterval(() => {
-// 	document.querySelectorAll('.logo_animation__arrow').forEach((el) => {
-// 		el.classList.add('logo_animation__arrow_active')
-// 	})
-// }, 11000)
-
-
-
 // Counter
 new CounterItemController({
 	countersElementsWrapperSelector: '.numbers',
@@ -87,7 +72,17 @@ new CounterItemController({
 	clearHoverDelay: 100
 })
 
-//modal
+// Header's link
+const headerMenu = document.querySelector('.header__menu')
+const headerLinks = document.querySelectorAll('.header__link')
+for (let index = 0; index < headerLinks.length; index++) {
+	headerLinks[index].addEventListener('click', function (e) {
+		bodyUnlock()
+		menu.classList.remove('_active')
+	})
+}
+
+// Modal
 const popupLinks = document.querySelectorAll('.popup-link')
 
 const body = document.querySelector('body')
@@ -201,21 +196,13 @@ function bodyUnlock() {
 	}
 })()
 
-// // popupTimer
-// let timer
-// let popupTimer = document.getElementById('popup-feedback')
-// let startTimer = true
-// function mouseStopped() {
-// 	if (!startTimer) return false
-// 	popupOpen(popupTimer)
-// }
+// управление строкой поиска на мобилке
+document.querySelector('.header__link_search').addEventListener('click', () => {
+	document.querySelector('.header__search-form').classList.add('active');
+})
+document.addEventListener('click', (e) => {
+	if (!e.target.closest('.header__link_search') && !e.target.closest('#search-form') && document.querySelector('.header__search-form').classList.contains('active')) {
+		document.querySelector('.header__search-form').classList.remove('active');
+	}	
+})
 
-// window.addEventListener('mousemove', function () {
-// 	clearTimeout(timer)
-// 	timer = setTimeout(mouseStopped, 90000)
-// })
-
-// //выключаем появления попапа после первого закрытия
-// popupTimer.querySelector('.popup__close').addEventListener('click', () => {
-// 	startTimer = false
-// })

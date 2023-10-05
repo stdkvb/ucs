@@ -2,9 +2,11 @@
 	.btn {
 		margin-top: 5rem;
 		min-width: 32rem;
+		width: 400px;
 
 		@include mobile {
 			margin-top: 3rem;
+			width: unset;
 		}
 	}
 

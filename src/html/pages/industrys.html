@@ -4,7 +4,8 @@
 
 <body>
 	<div class="wrapper">
-		@@include('components/business/_header.html')
+		@@include('components/business/_preloader.html')
+		@@include('components/business/_header.html', {activenav: true})
 		<main>
 			<section class="products">
 				<div class="container section__wrapper">
@@ -90,7 +91,8 @@
 		@@include('components/business/_cookie.html')
 	</div>
 
-
+	@@include('components/business/_popup-feedback.html')
+	@@include('components/business/_popup-successfully.html')
 	@@include('meta/_includeScripts.html')
 </body>
 

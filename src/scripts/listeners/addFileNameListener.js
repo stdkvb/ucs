@@ -8,6 +8,7 @@ const addFileNameListeners = () => {
 
 			inputFile.addEventListener('change', () => {
 				inputButton.innerText = inputFile.files[0].name
+				inputButton.classList.remove('file-button_placeholder')
 			})
 		})
 	}
