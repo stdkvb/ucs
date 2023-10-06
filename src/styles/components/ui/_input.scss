@@ -108,6 +108,12 @@ input {
 
 			&_placeholder {
 				color: $placeholderColor;
+			}	
+		}
+
+		&.has-success {
+			.file-button:not(:focus) {
+				border: 1px solid $success50;
 			}
 		}
 	}

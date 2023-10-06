@@ -6,6 +6,7 @@
 		@include tablet {
 			margin-top: 4rem;
   		margin-bottom: -4rem;
+		display: none;
 		}
 
 		@include tablet_small {

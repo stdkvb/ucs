@@ -1,6 +1,6 @@
 <div class="call-request" id="call-request">
 	<div class="call-request__form">
-		<form>
+		<form novalidate>
 			@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', name: 'name', required: true})
 			@@include('components/ui/_input-phone.html', {label: 'Номер телефона', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
 			@@include('components/ui/_input-email.html', {label: 'E-mail', placeholder: 'Введите email', name: 'email', required: false})

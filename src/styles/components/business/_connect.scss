@@ -1,6 +1,10 @@
 .connect {
 	background-color: $dark;
 
+	.container {
+		overflow: hidden;
+	}
+
 	.section__title {
 		color: $white;
 		max-width: 650px;

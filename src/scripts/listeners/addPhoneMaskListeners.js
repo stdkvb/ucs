@@ -32,16 +32,6 @@ function addPhoneMaskListeners() {
 			handleMask(e)
 		}
 	})
-	document.addEventListener('focus', (e) => {
-		if (e.target.hasAttribute('type') && e.target.getAttribute('type') === 'tel') {
-			handleMask(e)
-		}
-	})
-	document.addEventListener('blur', (e) => {
-		if (e.target.hasAttribute('type') && e.target.getAttribute('type') === 'tel') {
-			handleMask(e)
-		}
-	})
 	document.addEventListener('keydown', (e) => {
 		if (e.target.hasAttribute('type') && e.target.getAttribute('type') === 'tel') {
 			handleMask(e)

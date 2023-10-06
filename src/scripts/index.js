@@ -68,7 +68,7 @@ new CounterItemController({
 	countersElementsWrapperSelector: '.numbers',
 	counterElementSelector: '.numbers__item',
 	counterNumElementSelector: '.value',
-	calcAnimationDelay: 2000,
+	calcAnimationDelay: 4000,
 	clearHoverDelay: 100
 })
 
@@ -199,10 +199,12 @@ function bodyUnlock() {
 // управление строкой поиска на мобилке
 document.querySelector('.header__link_search').addEventListener('click', () => {
 	document.querySelector('.header__search-form').classList.add('active');
+	document.getElementById('burger-btn').classList.remove('active');
 })
 document.addEventListener('click', (e) => {
 	if (!e.target.closest('.header__link_search') && !e.target.closest('#search-form') && document.querySelector('.header__search-form').classList.contains('active')) {
 		document.querySelector('.header__search-form').classList.remove('active');
+		
 	}	
 })
 

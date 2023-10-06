@@ -31,8 +31,8 @@
 			display: flex;
 			align-items: center;
 
-			@include min_desktop_extra {
-				font-size: 10rem;
+			@include min_desktop_huge{
+				font-size: 12rem;
 			}
 
 			@include desktop_huge {
