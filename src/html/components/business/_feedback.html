@@ -1,8 +1,9 @@
 <div class="feedback" id="feedback">
 	<div class="feedback__form">
-		<form>
+		<form novalidate>
 			@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', name: 'name', required: true})
-			@@include('components/ui/_input-phone.html', {label: 'Номер телефона', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})	
+			@@include('components/ui/_input-phone.html', {label: 'Номер телефона', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
+			@@include('components/ui/_input-email.html', {label: 'E-mail', placeholder: 'Введите email', name: 'email', required: false})
 			@@include('components/ui/_checkbox.html', {label: 'Я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" target="_blank">политикой конфиденциальности</a>', id: 'agreement', name: 'agreement', required: true, checked: false})
 			@@include('components/ui/_button.html', {children: 'Отправить заявку', class: 'btn', type: 'submit'})
 		</form>

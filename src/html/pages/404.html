@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Страница не найдена'})
+
+<body>
+	<div class="wrapper">
+		@@include('components/business/_preloader.html')
+		@@include('components/business/_header.html', {activenav: true})
+		<main>
+			<section class="error">
+				<div class="container section__wrapper">
+					<span class="error__code">404</span>
+					<h1>Страница не найдена...</h1>
+					<p>К сожалению, запрашиваемая вами страница не найдена</p>
+					@@include('components/ui/_link-button.html', {children: 'Вернуться на главную', class: 'btn', href: '/'})
+				</div>
+			</section>
+		</main>
+		@@include('components/business/_footer.html')
+		@@include('components/business/_cookie.html')
+	</div>
+
+	@@include('components/business/_popup-feedback.html')
+	@@include('components/business/_popup-successfully.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

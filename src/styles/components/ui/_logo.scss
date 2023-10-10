@@ -12,6 +12,10 @@
 		gap: 1rem;
 	}
 
+	& a {
+		width: 274px;
+	}
+
 	& a,
 	a:visited,
 	a:focus {
@@ -21,7 +25,10 @@
 		}
 	}
 
-	& > a > img {
-		max-width: 227px;
-	}
+	// & > a > img {
+	// 	max-width: 227px;
+	// }
+	// & > a > svg {
+	// 	max-width: 227px;
+	// }
 }

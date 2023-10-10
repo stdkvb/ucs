@@ -1,5 +1,6 @@
+
+import preloader from './ElementsControllers/Preloader'
 import takeControlYandexMap from './ElementsControllers/YandexMapController'
-import preloaderOnload from './ElementsControllers/PreloaderController'
 import CounterItemController from './ElementsControllers/CounterItemController'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlForms from './ElementsControllers/FormController'
@@ -16,9 +17,11 @@ takeControlYandexMap()
 CookieController('.cookie-container', '.cookie-accept')
 addFileNameListeners()
 
+
+// preloader
 document.body.classList.add('_lock')
 window.onload = () => {
-	preloaderOnload()
+	preloader()
 	const options = { threshold: [0.1] }
 	const observer = new IntersectionObserver(onEntry, options)
 	const elements = document.querySelectorAll('.element-animation')
@@ -30,9 +33,8 @@ window.onload = () => {
 	}, 800)
 }
 
-/* Код ниже для возвращения исходной высоты мобильному меню (100vh)
-после ресайза экрана */
 
+// Код ниже для возвращения исходной высоты мобильному меню (100vh) после ресайза экрана
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01
 // Then we set the value in the --vh custom property to the root of the document
@@ -42,12 +44,6 @@ window.addEventListener('resize', () => {
 	// We execute the same script as before
 	let vh = window.innerHeight * 0.01
 	document.documentElement.style.setProperty('--vh', `${vh}px`)
-
-	// if (document.body.classList.contains('_lock')) {
-	// 	document.body.classList.remove('_lock')
-	// } else {
-	// 	document.body.classList.add('_lock')
-	// }
 })
 
 // page load animation
