@@ -57,15 +57,15 @@
 		justify-content: center;
 		gap: 1rem;
 
+		span {
+			@include InterRegular;
+			font-size: 1.6rem;
+		}
+
 		span:first-of-type {
 			@include InterBold;
 			font-size: 2rem;
 			text-transform: uppercase;
-		}
-
-		span:last-of-type {
-			@include InterRegular;
-			font-size: 1.6rem;
 		}
 	}
 
