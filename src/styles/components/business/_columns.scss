@@ -8,7 +8,6 @@
 	}
 
 	&__item {
-		
 		&:not(:last-child) {
 			@include desktop {
 				margin-bottom: 6rem;
@@ -27,6 +26,7 @@
 	}
 
 	&__description {
+		height: 100%;
 		p {
 			&:not(:last-child) {
 				margin-bottom: 1.5rem;
@@ -38,7 +38,8 @@
 		}
 
 		img {
-			min-height: 369px;
+			max-height: unset !important;
 		}
 	}
 }
+
