@@ -1,5 +1,5 @@
 .other-products {
-	.section__wrapper {		
+	.section__wrapper {
 		padding-top: 0;
 	}
 
@@ -20,11 +20,13 @@
 	&__item {
 		padding: 2rem;
 		background-color: $gray;
-		min-height: 200px;
 		display: grid;
 		grid-template-columns: 1fr;
+		height: 100%;
+		height: 210px;
 
 		@include tablet_small {
+			height: 200px;
 			padding: 1.5rem;
 		}
 	}
@@ -34,10 +36,10 @@
 		font-size: 2.4rem;
 		display: block;
 		margin-bottom: 1rem;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+		-webkit-line-clamp: 2;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 
 		&::after {
 			display: none;
@@ -70,3 +72,4 @@
 		}
 	}
 }
+

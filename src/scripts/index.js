@@ -17,7 +17,6 @@ takeControlYandexMap()
 CookieController('.cookie-container', '.cookie-accept')
 addFileNameListeners()
 
-
 // preloader
 document.body.classList.add('_lock')
 window.onload = () => {
@@ -203,4 +202,21 @@ document.addEventListener('click', (e) => {
 		
 	}	
 })
+
+const productSwiper = new Swiper('.other-products__swiper', {
+	slidesPerView: '1',
+	spaceBetween: 20,
+	autoplay: {
+		delay: 2000
+	},
+	breakpoints: {
+    575: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    }
+  }
+})
+
 

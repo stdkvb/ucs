@@ -23,7 +23,7 @@ body {
 }
 
 html {
-	font-size:62.5%;
+	font-size: 62.5%;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 		overflow-y: hidden;
 	}
 
-	@supports (-moz-appearance:none) {
+	@supports (-moz-appearance: none) {
 		overflow-y: auto;
 	}
 }
@@ -46,23 +46,21 @@ body {
 	position: relative;
 	min-height: 100%;
 	// display: grid;
-    grid-template: minmax(112px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template: minmax(112px, auto) 1fr minmax(70px, auto) / 1fr;
 	grid-template-areas:
-		"header"
-		"main"
-		"footer";
+		'header'
+		'main'
+		'footer';
 
-		@include desktop_extra_small {
-			grid-template: minmax(60px, auto) 1fr minmax(70px, auto) / 1fr;
+	@include desktop_extra_small {
+		grid-template: minmax(60px, auto) 1fr minmax(70px, auto) / 1fr;
 
-			grid-template-areas:
-				"header"
-				"main"
-				"footer";
-			}
+		grid-template-areas:
+			'header'
+			'main'
+			'footer';
+	}
 }
-
-
 
 .container {
 	width: 100%;
@@ -133,10 +131,6 @@ a {
 	text-decoration: none;
 }
 
-ul {
-	list-style: none;
-}
-
 button {
 	border: none;
 
@@ -147,9 +141,22 @@ button {
 	:disabled {
 		cursor: default;
 	}
-
 }
 
 img {
 	width: 100%;
 }
+
+ul {
+	list-style: disc;
+	padding-left: 20px;
+
+	li {
+		font-size: 2.4rem;
+
+		@include mobile {
+			font-size: 1.4rem;
+		}
+	}
+}
+
