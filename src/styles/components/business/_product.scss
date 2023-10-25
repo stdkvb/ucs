@@ -19,12 +19,13 @@
 		font-size: 2rem;
 		color: $dirty;
 		opacity: 0.5;
+		margin-bottom: 30px;
+		display: block;
 	}
 
-	&__list {
+	ul {
 		list-style: disc;
 		padding-left: 20px;
-		margin-top: 30px;
 
 		@include tablet {
 			margin-top: 20px;
