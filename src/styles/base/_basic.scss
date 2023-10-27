@@ -20,6 +20,7 @@ body {
 	@include InterRegular;
 	height: 100%;
 	touch-action: pan-x pan-y;
+	overflow-x: hidden;
 }
 
 html {

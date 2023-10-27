@@ -13,7 +13,7 @@ addPhoneMaskListeners()
 addPopupCloseListener(popupClose)
 takeControlMenu()
 takeControlForms()
-takeControlYandexMap()
+// takeControlYandexMap()
 CookieController('.cookie-container', '.cookie-accept')
 addFileNameListeners()
 
