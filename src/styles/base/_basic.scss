@@ -20,7 +20,6 @@ body {
 	@include InterRegular;
 	height: 100%;
 	touch-action: pan-x pan-y;
-	overflow-x: hidden;
 }
 
 html {
@@ -46,20 +45,24 @@ body {
 .wrapper {
 	position: relative;
 	min-height: 100%;
-	// display: grid;
+	display: grid;
 	grid-template: minmax(112px, auto) 1fr minmax(70px, auto) / 1fr;
 	grid-template-areas:
 		'header'
 		'main'
 		'footer';
 
-	@include desktop_extra_small {
-		grid-template: minmax(60px, auto) 1fr minmax(70px, auto) / 1fr;
+	// @include desktop_extra_small {
+	// 	grid-template: minmax(60px, auto) 1fr minmax(70px, auto) / 1fr;
 
-		grid-template-areas:
-			'header'
-			'main'
-			'footer';
+	// 	grid-template-areas:
+	// 		'header'
+	// 		'main'
+	// 		'footer';
+	// }
+
+	@include desktop_medium {
+		display: block;
 	}
 }
 
