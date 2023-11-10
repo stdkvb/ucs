@@ -1,4 +1,3 @@
-
 import preloader from './ElementsControllers/Preloader'
 import takeControlYandexMap from './ElementsControllers/YandexMapController'
 import CounterItemController from './ElementsControllers/CounterItemController'
@@ -29,9 +28,8 @@ window.onload = () => {
 		for (const elm of elements) {
 			observer.observe(elm)
 		}
-	}, 800)
+	}, 100)
 }
-
 
 // Код ниже для возвращения исходной высоты мобильному меню (100vh) после ресайза экрана
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -193,14 +191,17 @@ function bodyUnlock() {
 
 // управление строкой поиска на мобилке
 document.querySelector('.header__link_search').addEventListener('click', () => {
-	document.querySelector('.header__search-form').classList.add('active');
-	document.getElementById('burger-btn').classList.remove('active');
+	document.querySelector('.header__search-form').classList.add('active')
+	document.getElementById('burger-btn').classList.remove('active')
 })
 document.addEventListener('click', (e) => {
-	if (!e.target.closest('.header__link_search') && !e.target.closest('#search-form') && document.querySelector('.header__search-form').classList.contains('active')) {
-		document.querySelector('.header__search-form').classList.remove('active');
-		
-	}	
+	if (
+		!e.target.closest('.header__link_search') &&
+		!e.target.closest('#search-form') &&
+		document.querySelector('.header__search-form').classList.contains('active')
+	) {
+		document.querySelector('.header__search-form').classList.remove('active')
+	}
 })
 
 const productSwiper = new Swiper('.other-products__swiper', {
@@ -210,13 +211,12 @@ const productSwiper = new Swiper('.other-products__swiper', {
 		delay: 2000
 	},
 	breakpoints: {
-    575: {
-      slidesPerView: 2,
-    },
-    991: {
-      slidesPerView: 3,
-    }
-  }
+		575: {
+			slidesPerView: 2
+		},
+		991: {
+			slidesPerView: 3
+		}
+	}
 })
-
 
